@@ -1,0 +1,2 @@
+se uso como base la siguiente plantilla: https://www.tooplate.com/live/2168_sweet_bakery
+se modifico para que hablara sobre mi gato, se eliminaron las caracteristicas responsive y animaciones, dejando solo lo escencial del trabajo
