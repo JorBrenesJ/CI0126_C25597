@@ -16,6 +16,7 @@
                 <a href="#about">Sobre Orion</a>
                 <a href="#gallery">Galería</a>
                 <a href="#contact">Contacto</a>
+                <a href="#cult" class="btn btn-modal">Unete al culto</a>
             </nav>
         </div>
     </header>
@@ -81,6 +82,29 @@
                 </figure>
             </div>
         </section>
+
+        <section class="modal">
+            <div class="modal__container">
+                <img src="images/cult3.png" class="modal__img">
+
+                <h2 class="modal-title">Unete al culto</h2>
+                <p class="modal-subtitle">Si quieres unirte al culto de Orion, puedes hacerlo a través de este formulario.</p>
+                <form action="#" method="post" class="cult-form">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="button" class="modal__close">Enviar</button>
+                </form>
+            </div>
+
+        </section>
+        <script src="js/main.js"></script>
     </main>
 
     <footer id="contact">
