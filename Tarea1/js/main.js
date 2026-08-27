@@ -4,6 +4,13 @@ const cultForm = document.querySelector('.cult-form');
 const toggleBtn = document.getElementById('toggle-btn');
 const orionLikes = document.getElementById('Orion-likes');
 const accordionItems = document.querySelectorAll('.accordion-item');
+const track = document.getElementById('carouselTrack');
+const slides = track.children;
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentIndex = 0;
+
+
 
 openModal.addEventListener('click', (e) => {
     e.preventDefault();
@@ -47,4 +54,19 @@ accordionItems.forEach(item => {
             content.style.maxHeight = content.scrollHeight + 'px';
         }
     });
+});
+
+function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
 });
