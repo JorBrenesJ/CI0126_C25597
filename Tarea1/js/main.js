@@ -1,6 +1,8 @@
 const openModal = document.querySelector('.btn-modal');
 const modal = document.querySelector('.modal');
 const cultForm = document.querySelector('.cult-form');
+const toggleBtn = document.getElementById('toggle-btn');
+const orionLikes = document.getElementById('Orion-likes');
 
 openModal.addEventListener('click', (e) => {
     e.preventDefault();
@@ -20,3 +22,7 @@ cultForm.addEventListener('submit', (e) => {
     cultForm.reset();
     modal.classList.remove('modal--show');
 })
+
+toggleBtn.addEventListener('click', () => {
+    orionLikes.classList.toggle('hidden');
+});

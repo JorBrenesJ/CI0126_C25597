@@ -153,6 +153,19 @@ nav a.active,nav a:hover{background:var(--accent);color:#fff}
 .cult-form textarea{
 	resize: vertical;
 }
+
+#Orion-likes{
+	overflow: hidden;
+	transition: opacity 0.3s ease;
+	opacity: 1;
+}
+
+#Orion-likes.hidden{
+	display: none;
+	opacity: 0;
+}
+
+.toggle-btn{background:#fff;border:1px solid #eee;color:var(--dark)}
  
 /* Footer */
 footer{padding:4rem 5%;background:linear-gradient(180deg, #5A9B87 0%, #6DAE99 50%, #80C1AB 100%);color:var(--cream);text-align:center}
