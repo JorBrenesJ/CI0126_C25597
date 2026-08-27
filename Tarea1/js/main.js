@@ -1,13 +1,22 @@
 const openModal = document.querySelector('.btn-modal');
 const modal = document.querySelector('.modal');
-const closeModal = document.querySelector('.modal__close');
+const cultForm = document.querySelector('.cult-form');
 
 openModal.addEventListener('click', (e) => {
     e.preventDefault();
     modal.classList.add('modal--show');
 })
 
-closeModal.addEventListener('click', (e) => {
+cultForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const email = document.getElementById('email').value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+        alert('Por favor ingresa un correo electrónico válido.');
+        return;
+    }
+    cultForm.reset();
     modal.classList.remove('modal--show');
 })

@@ -56,13 +56,16 @@ nav a.active,nav a:hover{background:var(--accent);color:#fff}
 .modal{
 	position:fixed;
 	top:0;
+	bottom:0;
 	left:0;
 	right:0;
-	bottom:0;
+	left:0;
 	background-color:#B5EAD7bd;
 	display:flex;
 	opacity:0;
 	pointer-events:none;
+	justify-content:center;
+	align-items:center;
 }
 
 .modal__container{
@@ -71,12 +74,14 @@ nav a.active,nav a:hover{background:var(--accent);color:#fff}
 	max-width: 600px;
 	max-height: 90%;
 	background-color: #fff8f0;
-	border-radius: 6px;
+	border-radius: 12px;
 	padding: 3em 2.5em;
 	display: grid;
 	gap: 1em;
 	place-items: center;
 	grid-auto-columns: 100%;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+	text-align: center;
 }
 
 .modal__title{
@@ -113,7 +118,40 @@ nav a.active,nav a:hover{background:var(--accent);color:#fff}
 .modal--show{
 	opacity:1;
 	pointer-events:unset;
+	display:flex;
 
+}
+
+.cult-form{
+	display:flex;
+	flex-direction:column;
+	text-align:left;
+	gap: 0.4rem;
+}
+
+.cult-form label{
+	font-size: 1rem;
+	font-weight: 600;
+	margin-top: 0.5rem;
+}
+
+.cult-form input, .cult-form textarea{
+	padding: 0.7rem;
+	border-radius:6px;
+	border:1px solid #444;
+	background-color:#2a2a2a;
+	color: #fff;
+	font-size: 1rem;
+	outline:none;
+	transition: border-color 0.2s;
+}
+
+.cult-form input:focus, .cult-form textarea:focus{
+	border-color: #8a2be2
+}
+
+.cult-form textarea{
+	resize: vertical;
 }
  
 /* Footer */
