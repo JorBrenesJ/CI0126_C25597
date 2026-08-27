@@ -225,7 +225,7 @@ nav a.active,nav a:hover{background:var(--accent);color:#fff}
 	opacity: 0;
 }
 
-.toggle-btn{background:#fff;border:1px solid #eee;color:var(--dark)}
+.toggle-btn{background:#fff;border:1px solid #eee;color:var(--dark); cursor:pointer;}
 
 .faq{
 	max-width: 800px;
