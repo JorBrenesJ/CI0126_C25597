@@ -3,6 +3,7 @@ const modal = document.querySelector('.modal');
 const cultForm = document.querySelector('.cult-form');
 const toggleBtn = document.getElementById('toggle-btn');
 const orionLikes = document.getElementById('Orion-likes');
+const accordionItems = document.querySelectorAll('.accordion-item');
 
 openModal.addEventListener('click', (e) => {
     e.preventDefault();
@@ -25,4 +26,25 @@ cultForm.addEventListener('submit', (e) => {
 
 toggleBtn.addEventListener('click', () => {
     orionLikes.classList.toggle('hidden');
+});
+
+accordionItems.forEach(item => {
+
+    const header = item.querySelector('.accordion-header');
+    const content = item.querySelector('.accordion-content');
+
+    header.addEventListener('click', () => {
+
+        const isActive = item.classList.contains('active');
+
+        accordionItems.forEach(i => {
+            i.classList.remove('active');
+            i.querySelector('.accordion-content').style.maxHeight = null;
+        });
+
+        if (!isActive) {
+            item.classList.add('active');
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    });
 });
